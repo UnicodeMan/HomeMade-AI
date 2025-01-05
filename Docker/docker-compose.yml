@@ -7,7 +7,6 @@ services:
       dockerfile: Dockerfile
     container_name: ai-backend  # Specify the name for the backend container
     ports:
-      - "5000:5000"  # Map port 5000
       - "8000:8000"  # Map port 8000
     environment:
       OPENAI_API_KEY: NONE  # Replace PLACEHOLDER with the actual key
@@ -15,9 +14,8 @@ services:
       HF_API_KEY: NONE
       DATABASE_URL: postgres://postgres:POSTGRES_PASSWORD@postgres:5432/ai_chatbot  # PostgreSQL connection URL
     volumes:
-      - "/home/lukas/AI/AI chatbot/Backend:/app:ro"
-      - /home/lukas/AI/persistent_storage_for_ai:/data
-      - /home/lukas/AI/app-data:/app-data
+      - "/home/lukas/AI/HomeMade-AI:/app:ro"
+      - /home/lukas/AI/data:/data
     devices:
       - /dev/dri/renderD128:/dev/dri/renderD128  # Mount the GPU render device
     deploy:
