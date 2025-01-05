@@ -1,0 +1,61 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-backend  # Specify the name for the backend container
+    ports:
+      - "5000:5000"  # Map port 5000
+      - "8000:8000"  # Map port 8000
+    environment:
+      OPENAI_API_KEY: NONE  # Replace PLACEHOLDER with the actual key
+      GENAI_API_KEY: NONE # replace with your API key
+      HF_API_KEY: NONE
+      DATABASE_URL: postgres://postgres:POSTGRES_PASSWORD@postgres:5432/ai_chatbot  # PostgreSQL connection URL
+    volumes:
+      - "/home/lukas/AI/AI chatbot/Backend:/app:ro"
+      - /home/lukas/AI/persistent_storage_for_ai:/data
+      - /home/lukas/AI/app-data:/app-data
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128  # Mount the GPU render device
+    deploy:
+      resources:
+        limits:
+          memory: 10g  # Limit memory to 10 GB
+          cpus: "6.0"   # Limit to 6 CPUs
+    restart: unless-stopped
+    depends_on:
+      - redis
+      - postgres
+    networks:
+      - app_network
+
+  redis:
+    image: redis:alpine
+    container_name: ai-backend-redis  # Specify the name for the Redis container
+    ports:
+      - "6379:6379"  # Map Redis port
+    restart: unless-stopped
+    networks:
+      - app_network
+
+  postgres:
+    image: postgres:13-alpine
+    container_name: ai-backend-postgres  # Specify the name for the PostgreSQL container
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: POSTGRES_PASSWORD
+      POSTGRES_DB: ai_chatbot
+    volumes:
+      - /home/lukas/AI/postgresql-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"  # Map PostgreSQL port
+    restart: unless-stopped
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge

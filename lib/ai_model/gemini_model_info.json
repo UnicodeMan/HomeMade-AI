@@ -1,0 +1,890 @@
+{
+  "default": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 4096
+    }
+  },
+  "chat-bison-001": {
+    "ratelimit": {
+      "requests_per_minute": 5,
+      "requests_per_day": 100
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 131072,
+      "max_output_tokens": 4096
+    }
+  },
+  "text-bison-001": {
+    "ratelimit": {
+      "requests_per_minute": 10,
+      "requests_per_day": 200
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 4096,
+      "max_output_tokens": 131072
+    }
+  },
+  "embedding-gecko-001": {
+    "ratelimit": {
+      "requests_per_minute": 20,
+      "requests_per_day": 500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 4096,
+      "max_output_tokens": 0
+    }
+  },
+  "gemini-1.0-pro-latest": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 131072,
+      "max_output_tokens": 4096
+    }
+  },
+  "gemini-1.0-pro": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 131072,
+      "max_output_tokens": 4096
+    }
+  },
+  "gemini-pro": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 2000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.0-pro-001": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 131072,
+      "max_output_tokens": 4096
+    }
+  },
+  "gemini-1.0-pro-vision-latest": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 131072,
+      "max_output_tokens": 4096
+    }
+  },
+  "gemini-pro-vision": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 131072,
+      "max_output_tokens": 1024
+    }
+  },
+  "gemini-1.5-pro-latest": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 2000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-pro-001": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 2000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-pro-002": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 2000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-pro": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 2000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-pro-exp-0801": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 2000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-pro-exp-0827": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 2000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-flash-latest": {
+    "ratelimit": {
+      "requests_per_minute": 15,
+      "requests_per_day": 500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-flash-001": {
+    "ratelimit": {
+      "requests_per_minute": 15,
+      "requests_per_day": 500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-flash-001-tuning": {
+    "ratelimit": {
+      "requests_per_minute": 15,
+      "requests_per_day": 500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-flash": {
+    "ratelimit": {
+      "requests_per_minute": 15,
+      "requests_per_day": 500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-flash-exp-0827": {
+    "ratelimit": {
+      "requests_per_minute": 15,
+      "requests_per_day": 500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-flash-002": {
+    "ratelimit": {
+      "requests_per_minute": 15,
+      "requests_per_day": 500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-flash-8b": {
+    "ratelimit": {
+      "requests_per_minute": 15,
+      "requests_per_day": 1500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-flash-8b-001": {
+    "ratelimit": {
+      "requests_per_minute": 15,
+      "requests_per_day": 1500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-flash-8b-latest": {
+    "ratelimit": {
+      "requests_per_minute": 15,
+      "requests_per_day": 1500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-flash-8b-exp-0827": {
+    "ratelimit": {
+      "requests_per_minute": 15,
+      "requests_per_day": 1500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-1.5-flash-8b-exp-0924": {
+    "ratelimit": {
+      "requests_per_minute": 15,
+      "requests_per_day": 1500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-2.0-flash-exp": {
+    "ratelimit": {
+      "requests_per_minute": 10,
+      "requests_per_day": 1500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 2097152,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-exp-1206": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 2097152,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-exp-1121": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-exp-1114": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 8096
+    }
+  },
+  "gemini-2.0-flash-thinking-exp": {
+    "ratelimit": {
+      "requests_per_minute": 10,
+      "requests_per_day": 1500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 32768,
+      "max_output_tokens": 4096
+    }
+  },
+  "gemini-2.0-flash-thinking-exp-1219": {
+    "ratelimit": {
+      "requests_per_minute": 10,
+      "requests_per_day": 1500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 32768,
+      "max_output_tokens": 4096
+    }
+  },
+  "learnlm-1.5-pro-experimental": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 32768,
+      "max_output_tokens": 4096
+    }
+  },
+  "embedding-001": {
+    "ratelimit": {
+      "requests_per_minute": 10,
+      "requests_per_day": 1500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 32768,
+      "max_output_tokens": 0
+    }
+  },
+  "text-embedding-004": {
+    "ratelimit": {
+      "requests_per_minute": 10,
+      "requests_per_day": 1500
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 131072,
+      "max_output_tokens": 0
+    }
+  },
+  "aqa": {
+    "ratelimit": {
+      "requests_per_minute": 2,
+      "requests_per_day": 50
+    },
+    "pricing": {
+      "input": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      },
+      "more_than_tokens": {
+        "greater_than_tokens": 1024,
+        "price_per_request": 0.001
+      },
+      "output": {
+        "less_than_or_equal_to_tokens": 1024,
+        "price_per_request": 0.0005
+      }
+    },
+    "tokens": {
+      "max_input_tokens": 131072,
+      "max_output_tokens": 4096
+    }
+  }
+}

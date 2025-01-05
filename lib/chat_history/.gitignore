@@ -1,0 +1,3 @@
+# Ignore the system prompt file to hide sensitive details
+system_prompt.txt
+chat_sessions.db

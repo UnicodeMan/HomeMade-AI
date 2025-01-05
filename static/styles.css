@@ -1,0 +1,432 @@
+
+  
+  /* Message bubbles */
+  .message {
+    max-width: 70%;
+    margin: 8px 0;
+    clear: both;
+    position: relative;
+  }
+  
+  .user-message {
+    
+    background-color: #0084ff;
+    color: white;
+    border-radius: 18px 18px 4px 18px;
+    padding: 8px 12px;
+    margin-left: auto;
+    flex-grow: 1;      /* Allow the textarea to fill available space */
+
+  }
+  .system_prompt-message {
+    
+    background-color: #383838;
+    color: white;
+    border-radius: 18px 18px 4px 18px;
+    padding: 8px 12px;
+    margin-left: auto;
+    flex-grow: 1;      /* Allow the textarea to fill available space */
+
+  }
+  .assistant-message {
+    float: left;
+    background-color: #e4e6eb;
+    color: #050505;
+    border-radius: 18px 18px 18px 4px;
+    padding: 8px 12px;
+  }
+  
+  /* Timestamp styles */
+  .timestamp {
+    font-size: 11px;
+    color: #65676b;
+    margin-top: 4px;
+    text-align: right;
+  }
+  
+  /* Message input styles */
+  .message-input-container {
+    background-color: white;
+    border-top: 1px solid #e4e6eb;
+    padding: 12px;
+  }
+  
+  .message-input {
+    background-color: #f0f2f5;
+    border-radius: 20px;
+    padding: 8px;
+  }
+  
+  .message-input textarea {
+    resize: none;
+    background-color: transparent;
+    line-height: 1.34;
+  }
+  
+  .message-input textarea:focus {
+    box-shadow: none;
+  }
+  
+  #sendButton {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+  }
+  
+  /* Typing indicator */
+  .typing-indicator {
+    background-color: transparent;
+    padding: 8px 12px;
+    position: relative;
+  }
+  
+  .typing-dots {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .typing-dots span {
+    width: 8px;
+    height: 8px;
+    background-color: #65676b;
+    border-radius: 50%;
+    animation: typing 1.4s infinite;
+    opacity: 0.4;
+  }
+  
+  .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+  
+  @keyframes typing {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+  
+
+  
+  /* Update indicator */
+  .update-indicator {
+    position: absolute;
+    bottom: 100%;
+    right: 16px;
+    background-color: #0084ff;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .update-indicator.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Pre tag styles */
+  pre.wrap-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+    font-family: inherit;
+  }
+  
+  /* Session manager styles */
+  #sessionManager select {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+  
+  #sessionManager select option {
+    background-color: white;
+    color: #050505;
+  }
+  
+  /* Scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #bcc0c4;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #999;
+  }
+
+
+body {
+  overflow: hidden; /* Prevent the body from scrolling */
+}
+
+
+#commandConversation {
+  background-color: #1e1e1e;
+  color: #fff;
+  font-family: monospace;
+  padding: 1rem;
+  overflow-y: auto;
+  height: calc(100% - 2rem); /* Subtract padding */
+  resize: both;
+  overflow: auto;
+
+}
+
+.command-content {
+  height: 0vh; /* Adjust the height as needed */
+  overflow-y: auto; /* Make the command content scrollable */
+}
+#chat-area {
+    height: calc(100vh - 180px - 30vh); /* Adjust the height as needed */
+  }
+
+  /* ALL THIS ABOVE HAS TO BE RECONSIDERED */
+
+  /* General Styles */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.app-header {
+    background-color: #282c34;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Distribute space evenly */
+}
+
+.app-title {
+    font-size: 1.2rem;
+    margin-left: 1rem; /* Add spacing after the menu button */
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.side-menu {
+    background-color: #3f434d;
+    color: white;
+    padding: 1rem;
+    position: fixed; /* Keep the menu in place */
+    top: 4.2rem; /* Position below header */
+    left: -400px; /* Initially hidden */
+    height: 100%;
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out;
+    z-index: 1009;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.menu-item {
+    margin-bottom: 1rem;
+}
+
+.menu-item label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #555;
+    background-color: #282c34;
+    color: white;
+}
+
+
+
+
+.main-content {
+    flex-grow: 1; /* Occupy remaining space */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent content overflow */
+    padding: 1rem;
+    background-color: #f0f0f0; /* Light background for main content */
+    padding-top: 60px; /* Space for the fixed header */
+
+
+}
+
+.tab-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure tab content fills main area */
+}
+
+.tab-buttons {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.tab-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-button.active {
+    border-bottom: 2px solid #282c34;
+}
+
+.tab-content {
+    flex-grow: 1;
+    display: none;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+
+
+  
+
+
+.message-input-container {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    padding: 1rem;
+    display: flex;          /* Enable flexbox layout */
+    align-items: flex-end; /* Align items to the bottom */
+  }
+
+  /* ... Other styles ... */
+#outputUpdateIndicator {
+    position: absolute;
+    bottom: 0; /* Position at the bottom-right */
+    right: 16px;
+
+    background-color: #0084ff;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+}
+
+
+.update-indicator.visible {
+    opacity: 1;
+}
+.typing-indicator {
+    display: none;
+    text-align: center;
+    color: #999;
+    margin-top: 0.5rem;
+    animation: pulse 1s infinite; /* Add animation */
+  }
+
+#chat .chat-messages {
+  overflow-y: auto; 
+  flex-grow: 1;     
+  min-height: 10px; 
+  height: calc(100vh - 27vh); 
+  background-color: #ffffff;
+
+}
+.send-button {
+    background-color: #282c34; /* Darker blue */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem; /* Slightly larger icon */
+}
+#chat .tab-content {
+  display: flex;
+  flex-direction: column; 
+}
+
+/* related to changes in commandConversation */
+
+
+
+#commandConversation {
+  background-color: #1e1e1e;
+  color: #fff;
+  font-family: monospace;
+  padding: 1rem;
+  overflow-y: auto;
+  height: calc(100% - 2rem); 
+  resize: both;
+  overflow: auto;
+}
+
+.command-output {
+  padding: 0.5rem; /* Add padding to each output */
+  margin-bottom: 0.5rem; /* Add space between outputs */
+}
+
+.command_output .system { 
+  background-color: #282828; /* Darker grey for system output */
+}
+
+.command-output .assistant { 
+  background-color: #333; /* Slightly lighter grey for AI output */
+}
+
+
+
+/* Add styles for the icons (replace with your actual icon classes) */
+.command_output .system-icon {
+  /* Styles for the system output icon */
+  background-image: url(static/img/computer_icon.jpeg);
+  display: inline-block;
+  margin-right: 0.5rem; 
+  /* Add your icon image/font here */
+}
+
+.command-output .assistant-icon {
+  /* Styles for the AI output icon */
+  background-image: url(static/img/ai_icon.jpeg);
+
+  display: inline-block;
+  margin-right: 0.5rem;
+  /* Add your icon image/font here */
+}

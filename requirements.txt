@@ -1,0 +1,16 @@
+redis
+fastapi
+google.generativeai
+nltk
+numpy
+pydantic
+redis
+slowapi
+uvicorn
+setuptools
+psycopg2-binary
+psutil
+torch
+transformers
+aiohttp
+huggingface_hub

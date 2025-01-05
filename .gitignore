@@ -1,0 +1,6 @@
+__pycache__
+.venv
+logs
+temp
+*.log
+app copy.py
