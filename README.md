@@ -19,7 +19,7 @@ This is a dockerized AI backend project that can:
 If you want to take this for a test-spin, refer to `USAGE.md`.
 
 **Todo:**
-* **Some things are hard-coded...** ...in code, and that is sub-optimal for scalable and customizable use. 
+* **Some things are hard-coded** in code, and that is sub-optimal for scalable and customizable use. 
 * **Some features may not fail gracefully.**
 * **App's console output is used for debugging, and the content it outputs is a mess.** This is not revelant if you're using webpage interface. In there, it provides clean information.
 * **Frontend/backend is not polished.** It lacks many features, simultaneous multi-user and multi-session support, multimedia support, non-buggy message saving that would work accross sessions. The user interfaces design itself is somewhat unfinished, but quite functional
