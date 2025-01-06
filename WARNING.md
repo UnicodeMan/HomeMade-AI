@@ -4,9 +4,9 @@ This software is experimental and potentially dangerous. It is provided "as-is" 
 
 **Important:**
 
-* **High Risk:** This software may produce unexpected and potentially harmful outputs that may harm your system. Use with extreme caution.
+* **High Risk:** This software relies on AI to run system commands, and the AI can produce unexpected and potentially harmful outputs that may harm your system. Use with caution.
 
-* **Careful Monitoring:** It is essential to closely monitor the software's behavior and outputs.
+* **Careful Monitoring:** It is essential to closely monitor the application and AIs interactions with the system.
 
 * **Isolation:** Run this software in a secure and isolated environment to minimize potential harm.
 
