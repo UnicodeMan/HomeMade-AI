@@ -1,40 +1,19 @@
 import os
 import google.generativeai as genai
-import subprocess
 import uvicorn
 import asyncio
-from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect, Request
-from fastapi.responses import HTMLResponse
+from fastapi import FastAPI, WebSocket, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
-from fastapi import Query
-from asyncio import Semaphore
-
-from pydantic import BaseModel
-from typing import Optional, List, Dict
+from typing import  Dict
 from datetime import datetime
 import json
 from fastapi.responses import JSONResponse
-
-from slowapi import Limiter, _rate_limit_exceeded_handler
-from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
-from slowapi.middleware import SlowAPIMiddleware
-import redis
-
-
-
 import signal
-import re
 import sys
-from functools import lru_cache
-import tempfile
 import sys
-import select
 from contextlib import asynccontextmanager
-import shlex
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from lib.endpoints import mainRouter, sessionRouter, modelRouter
 from lib.shell_environment import ShellEnvironment 
 from lib.ai_generation import generate_content_with_limit
@@ -42,6 +21,8 @@ from lib.chat_history import ChatContext
 from lib.limiter import RateLimiter
 from lib.ai_model import AIModelFactory, GeminiAI, HuggingFaceAI
 import atexit
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 
 class GlobalState:
