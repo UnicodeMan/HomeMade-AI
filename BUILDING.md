@@ -14,13 +14,13 @@ c) Create a directory for postgresql database data:
 
 d) (Optional) You may create additional directories that you will plug to the container and specify in Volumes: section 
 
-e) Clone the repository and check out to latest version (may work with latest commit, but not guaranteed):
+e) Clone the repository and check out to latest release tag commit (may work with latest commit, but not guaranteed):
 
 `cd ~/AI`
 
 `git clone https://github.com/UnicodeMan/HomeMade-AI.git`
 
-`git checkout v0.1`
+`git checkout 5560e29` (for v0.1)
 
 * **II. Modify docker-compose.yml**
 
