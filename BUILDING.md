@@ -14,11 +14,13 @@ c) Create a directory for postgresql database data:
 
 d) (Optional) You may create additional directories that you will plug to the container and specify in Volumes: section 
 
-e) Clone the repository:
+e) Clone the repository and check out to latest version (may work with latest commit, but not guaranteed):
 
 `cd ~/AI`
 
 `git clone https://github.com/UnicodeMan/HomeMade-AI.git`
+
+`git checkout v0.1`
 
 * **II. Modify docker-compose.yml**
 
@@ -53,7 +55,7 @@ c) (Optional) Review if added repositories and software reflect your needs
 
 * **IV. Start the Backend!**
 
-a) Change directory to ~/AI/HomeMade-AI
+a) Change directory to ~/AI/HomeMade-AI/Docker
 
 b) run docker-compose up
 

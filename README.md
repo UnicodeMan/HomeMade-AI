@@ -16,7 +16,7 @@ This is a dockerized AI backend project that can:
 - Install required python libraries on-the-fly: **full access to the internet** and **local python environment** enables the AI to install any library it needs via pip3 command.
 
 **Usage**
-If you want to take this for a test-spin, refer to `USAGE.md`.
+If you want to take this for a test-spin, refer to `BUILDING.md`.
 
 **Todo:**
 * **Some things are hard-coded** in code, and that is sub-optimal for scalable and customizable use. 
