@@ -1,5 +1,4 @@
 import os
-import google.generativeai as genai
 import uvicorn
 import asyncio
 from fastapi import FastAPI, WebSocket, Request
